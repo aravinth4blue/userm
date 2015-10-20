@@ -6,7 +6,7 @@ define('DB_DATABASE', getenv('OPENSHIFT_APP_NAME'));
 
 
 
-$conn = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD)or die("Cannot connect");
-echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
+$conn = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD)or die("Cannot connect" .mysqli_error($conn));
+
 $db=mysqli_select_db($conn,DB_DATABASE) or die("Failed to connect to MySQL: " . mysqli_error($conn));
 ?>
