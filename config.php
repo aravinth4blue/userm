@@ -1,13 +1,10 @@
 <?php
-define('DB_SERVER', 'openshift.redhat.com');
-define('DB_USERNAME', 'admint56uKyw');
-define('DB_PASSWORD', ' B8Upacq3JlED');
-define('DB_DATABASE', 'reg');
+define('DB_SERVER', getenv('OPENSHIFT_MYSQL_DB_HOST') . ':' . getenv('OPENSHIFT_MYSQL_DB_PORT'));
+define('DB_USERNAME', getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
+define('DB_PASSWORD', getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
+define('DB_DATABASE', getenv('OPENSHIFT_APP_NAME'));
 
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'admint56uKyw');
-define('DB_PASSWORD', 'B8Upacq3JlED');
-define('DB_DATABASE', 'php');
+
 
 $conn = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD)or die("Cannot connect");
 echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
