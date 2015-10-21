@@ -4,7 +4,7 @@ define('DB_PORT', getenv('OPENSHIFT_MYSQL_DB_PORT'));
 define('DB_USERNAME', getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
 define('DB_PASSWORD', getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
 define('DB_DATABASE', getenv('OPENSHIFT_APP_NAME'));
-var_dump($OPENSHIFT_MYSQL_DB_HOST);
+echo $OPENSHIFT_MYSQL_DB_HOST;
 var_dump(getenv('OPENSHIFT_MYSQL_DB_HOST'));
 var_dump(getenv('OPENSHIFT_MYSQL_DB_PORT'));
 var_dump(DB_DATABASE);
